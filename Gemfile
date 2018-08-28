@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use mysql as the database for Active Record
@@ -24,11 +23,17 @@ gem 'jbuilder', '~> 2.5'
 
 # AH: Gem added - 17/08/18
 # Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications
-gem 'bootstrap-sass'
+# gem 'bootstrap-sass'
+gem 'font-awesome-rails'
 # flexible authentication solution
 gem 'devise'
 # Rails engine for static pages
 gem 'high_voltage'
+# pagination library that integrates with Ruby on Rails
+gem 'will_paginate', '~> 3.1.0'
+gem 'bootstrap-will_paginate', '1.0.0'
+# Use JQuery to Bootstrap functions
+gem 'jquery-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -54,6 +59,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'better_errors'
   gem 'rails_layout'
+  gem "rubocop", ">= 0.58.0", require: false
   gem 'spring-commands-rspec'
 end
 
